@@ -22,9 +22,9 @@ p_cards = []
 
 
 # Dict of dicts for Player soft total basic strategy
-"""Soft_strategy = {'1': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 1, '18': 1, '19': 0, '20': 0, '21': 0},
+Soft_strategy = {'11': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                        '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                        '16': 1, '17': 1, '18': 1, '19': 0, '20': 0, '21': 0},
                  '2': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
                        '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
                        '16': 1, '17': 1, '18': 1, '19': 0, '20': 0, '21': 0},
@@ -54,9 +54,9 @@ p_cards = []
                         '16': 1, '17': 1, '18': 1, '19': 0, '20': 0, '21': 0}}
 
 # Dict of dicts for Player hard total basic strategy
-Hard_strategy = {'1': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+Hard_strategy = {'11': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                        '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                        '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
                  '2': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
                        '10': 1, '11': 1, '12': 0, '13': 0, '14': 0, '15': 0,
                        '16': 0, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
@@ -72,6 +72,69 @@ Hard_strategy = {'1': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
                  '6': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
                        '10': 1, '11': 1, '12': 0, '13': 0, '14': 0, '15': 0,
                        '16': 0, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '7': {'4': 1, '5': 1, '6': 1, '7': 1,  '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '8': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '9': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '10': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                        '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                        '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0}}
+# Dealers strategy
+"""Soft_strategy = {'11': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                        '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                        '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '2': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '3': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '4': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '5': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '6': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '7': {'4': 1, '5': 1, '6': 1, '7': 1,  '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '8': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '9': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '10': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                        '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                        '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0}}
+
+# Dict of dicts for Player hard total basic strategy
+Hard_strategy = {'11': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                        '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                        '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '2': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '3': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '4': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '5': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
+                 '6': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
+                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
+                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
                  '7': {'4': 1, '5': 1, '6': 1, '7': 1,  '8': 1, '9': 1,
                        '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
                        '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
@@ -84,236 +147,106 @@ Hard_strategy = {'1': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
                  '10': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
                         '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
                         '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0}}"""
-                 
-Soft_strategy = {'1': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '2': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '3': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '4': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '5': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '6': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '7': {'4': 1, '5': 1, '6': 1, '7': 1,  '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 1, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '8': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 1, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '9': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 1, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '10': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                        '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                        '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0}}
-
-# Dict of dicts for Player hard total basic strategy
-Hard_strategy = {'1': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '2': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '3': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '4': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '5': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '6': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '7': {'4': 1, '5': 1, '6': 1, '7': 1,  '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '8': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '9': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                       '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                       '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0},
-                 '10': {'4': 1, '5': 1, '6': 1, '7': 1, '8': 1, '9': 1,
-                        '10': 1, '11': 1, '12': 1, '13': 1, '14': 1, '15': 1,
-                        '16': 1, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0}}
 
 
-def stand(p_cards, d_cards):  # player total, dealers hand
-    p_tot = sum(p_cards)
-    # Is Player bust? Outa here
-    if p_tot > 21:
-        return
-
-    d_tot = sum(d_cards)
-    if len(p_cards) == 2 and p_tot == 21:
-        if d_tot == 11 and d_cards[0] == 1:
-            d_cards[0] = 11
-            return
-            # d_cards[1] might be an ace, still blackjack, end hand
-        elif d_tot == 11 and d_cards[1] == 1:
-            d_cards[1] = 11
-            return
-        return
-        # Handle aces
-    if d_tot == 2:
-        d_cards[0] = 11
-    elif d_cards[0] == 1:
-        d_cards[0] = 11
-    elif d_cards[1] == 1:
-        d_cards[1] = 11
-
-    # Handle Dealer soft totals. Have already hardened d_cards[0] == 11
-    # Recalc sum to reflect hard total of ace. Revert to val 1 if bust
-    d_tot = sum(d_cards)
-    while d_tot < 17:
-        d_cards.append(shoe.pop())
-        if d_cards[-1] == 1:
-            d_cards[-1] = 11
-            d_tot = sum(d_cards)
-        msg = message('Dealer', d_cards)
-        if "Bust" in msg:
-            if 11 in d_cards:
-                d_cards[d_cards.index(11)] = 1
-                msg = message('Dealer', d_cards)
-                d_tot = sum(d_cards)
-            if d_tot > 17:
-                return
-        d_tot = sum(d_cards)
-    return
-
-
-def players_strategy(who, hand):
+def players_strategy(hand, d_c):
     tot = sum(hand)
+    msg = ""
     # Handle soft totals. find where the ace resides;
     # check total against Soft_strategy dict;
     # if draw, add new card to hand and revalue ace if necessary;
-
-    if who = 'Player' and 1 in hand:
-        # Blackjack?
-        if len(hand) == 2 and tot == 11:  # Must be blackjack
-            hand[hand.index(1)] = 11      # Total 21
-            return(hand)
-
-    while hand[-1] == 1:
-        hand[-1] = 11
-        tot = sum(hand)
-        while tot < 20:
-            if Soft_strategy[str(d_cards[0])][str(tot)]:
+    while 1:
+        if 11 in hand:
+            if tot > 21:
+                hand[hand.index(11)] = 1
+                tot = sum(hand)
+            elif tot > 19:
+                # msg, hand = message('Player', hand)
+                break
+            elif tot < 20:
+                if Soft_strategy[str(d_c[0])][str(tot)]:
+                    hand.append(shoe.pop())
+                    msg, hand = message("Player", hand)
+                    if "Bust" in msg:
+                        if 11 in hand:
+                            hand[hand.index(11)] = 1
+                            msg, hand = message("Player", hand)
+                    tot = sum(hand)
+                    reveal(msg)
+                else:
+                    # msg, hand = message('Player', hand)
+                    # reveal(msg)
+                    break
+        if tot < 17:
+            if Hard_strategy[str(d_c[0])][str(tot)]:
                 hand.append(shoe.pop())
-                # Test for ace and make hard total
-                if hand[-1] == 1:
+                tot = sum(hand)
+                if tot < 11 and hand[-1] == 1:
                     hand[-1] = 11
-                msg = message('Player', hand)
+                msg, hand = message("Player", hand)
                 if "Bust" in msg:
                     if 11 in hand:
                         hand[hand.index(11)] = 1
-                        msg = message('Player', hand)
-                print(msg)
+                        msg, hand = message("Player", hand)
+                        reveal(msg)
                 tot = sum(hand)
+                reveal(msg)
             else:
                 break
-
-    while tot < 17:
-        if Hard_strategy[str(d_cards[0])][str(tot)]:
-            hand.append(shoe.pop())
-            tot = sum(hand)
-            msg = message('Player', hand)
-            print(msg)
         else:
             break
-    # Handle aces
-    if tot == 2:
-        hand[0] = 11
-    elif hand[0] == 1:
-        hand[0] = 11
-    elif hand[1] == 1:
-        hand[1] = 11
 
-
-def dealers_strategy(who, hand):
-    # Start checking Dealer's hand. Reveal hidden card. Blackjack?
-    tot = sum(hand)
-    if tot == 11:
-        if hand[0] == 1:
-            hand[0] = 11
-            print("\nDealers hidden card is 10. Blackjack!")
-            return
-        # hand[1] might be an ace, still blackjack, end hand
-        elif hand[1] == 1:
-            hand[1] = 11
-            print("\nDealers hidden card is an ace. Blackjack!")
-            return
-
-    # Final Player message (needed to confirm Dealer Blackjack or not first)
-    p_tot = sum(p_cards)
-    # Is Player bust? Outa here
-    if p_tot > 21:
-        return
-    # Is Player Blackjack?
-    if len(p_cards) == 2 and p_tot == 21:
-        print("Player stands on Blackjack")
-        # still need to reveal in case of Dealer Blackjack
-        if hand[0] == 10:
-            print("\nDealers hidden card is {}".format(hand[1]))
-        return
+    if "Bust" in msg:
+        return msg
     else:
-        print("Player stands on {}".format(p_tot))
+        msg = "Player stands on {}".format(tot)
+        reveal(msg)
+        return msg
 
-    # No blackjacks but still have to reveal and check for aces
-    if hand[0] == 1:
-        # default to hard total. Can revert if bust.
-        hand[0] = 11
-        # are there two aces?
-        if hand[1] == 1:
-            print("\nDealers hidden card is an ace, total {} or {}".
-                  format(tot, tot+10))
-        # No ace in hand[1] reveal
-        else:
-            print("\nDealers hidden card is {}, total {} or {}".
-                  format(hand[1], tot, tot+10))
-    # hand[0] not ace. hand[1]?
-    elif hand[1] == 1:
-        hand[1] = 11
-        print("\nDealers hidden card is an ace, total {} or {}".
-              format(tot, tot+10))
-    # No aces. Final reveal
-    else:
-        print("\nDealers hidden card is {}, total {}".
-              format(hand[1], tot))
 
-    # Handle Dealer soft totals. Have already hardened hand[0] == 11
-    # Recalc sum to reflect hard total of ace. Revert to val 1 if bust
+def dealers_strategy(hand):
     tot = sum(hand)
-    while tot < 17:
-        hand.append(shoe.pop())
-        if hand[-1] == 1:
-            hand[-1] = 11
-            tot = sum(hand)
-        msg = message('Dealer', hand)
-        if "Bust" in msg:
-            if 11 in hand:
+    msg = "\nDealers hidden card is {}, total {}".format(hand[1], tot)
+    reveal(msg)
+    # Handle soft totals. find where the ace resides;
+    # check total against Soft_strategy dict;
+    # if draw, add new card to hand and revalue ace if necessary;
+    while 1:
+        if 11 in hand:
+            if tot > 21:
                 hand[hand.index(11)] = 1
-                msg = message('Dealer', hand)
+                tot = sum(hand)
+            elif tot < 17:
+                hand.append(shoe.pop())
+                msg, hand = message("Dealers", hand)
+                if "Bust" in msg:
+                    if 11 in hand:
+                        hand[hand.index(11)] = 1
+                        msg, hand = message("Dealers", hand)
+                tot = sum(hand)
+                reveal(msg)
+        if tot < 17:
+            hand.append(shoe.pop())
             tot = sum(hand)
-            if tot > 17:
-                print(msg)
-                return
-        print(msg)
-        tot = sum(hand)
-    print("Dealer stands on {}".format(tot))
+            if tot < 11 and hand[-1] == 1:
+                hand[-1] = 11
+            msg, hand = message("Dealers", hand)
+            if "Bust" in msg:
+                if 11 in hand:
+                    hand[hand.index(11)] = 1
+                    msg, hand = message("Dealers", hand)
+                    reveal(msg)
+            tot = sum(hand)
+            reveal(msg)
+        else:
+            break
 
-    return
+    if "Bust" in msg:
+        return msg
+    else:
+        msg = "Dealer stands on {}".format(tot)
+        reveal(msg)
+        return msg
 
 
 # Stats vars
@@ -322,11 +255,71 @@ bet = [1]
 streak = [0]
 game_lngth, hnd_win, hnd_lse = [0], [0], [0]  # Number of games, win/lose
 cards = []
-betting_strategy = [1, 1, 4]
+betting_strategy = [1, 2, 2, 4]
 winning_streak, losing_streak, old_ls, old_ws = [0], [0], [0], [0]
 
 
+def message(who, hand):
+    # repeat message routine
+    cd = hand[-1]
+    tot = sum(hand)
+    # Opening hand
+    if len(hand) == 2:
+        if who == 'Dealer':
+            # If Dealer has an ace...
+            if hand[0] == 1:
+                hand[0] = 11
+                msg = "{} has an ace and one hidden card\n".format(who)
+            elif hand[1] == 1:
+                hand[1] = 11
+                msg = "{} has {} and one hidden card\n".format(who, hand[0])
+            else:
+                msg = "{} has {} and one hidden card\n".format(who, hand[0])
+            return msg, hand
+
+        # Check for aces for soft total strategy
+        if 1 in hand:
+            # Two aces?
+            if hand[0] == 1 and hand[1] == 1:
+                hand[0] = 11
+                msg = "Player has two aces, total {}".format(tot+10)
+            # Ace is first card?
+            elif hand[0] == 1:
+                hand[0] = 11
+                msg = "Player has an ace and {}, total {} or {}".format(
+                        hand[1], tot, tot+10)
+            # Ace is second card
+            elif hand[1] == 1:
+                hand[1] = 11
+                msg = "Player has {} and an ace, total {} or {}".format(
+                        hand[0], tot, tot+10)
+            return msg, hand
+
+        msg = "player has {} and {}, total {}".format(
+                hand[0], hand[1], tot)
+        return msg, hand
+
+    # Has ace, Bust? will return with card revalued to 1
+    if cd == 11 and tot > 21:
+        msg = "Bust"
+        return msg, hand
+    # Has hard total ace.
+    if cd == 11:
+        msg = "{} draws an ace, total {} or {}".format(who, tot-10, tot)
+    elif cd == 1:
+        msg = "{} draws an ace, total {}".format(who, tot)
+    else:
+        msg = "{} draws {}, total {}".format(who, cd, tot)
+
+    if tot > 21:
+        msg = msg + ". Bust!"
+
+    return msg, hand
+
+
 def end_hand(p, d):  # Player, Dealer cards
+    msg = ""
+    # Keep record of last 10 games for avg value of cards
     game_lngth[0] += 1
     cards.append(p)
     cards.append(d)
@@ -337,30 +330,29 @@ def end_hand(p, d):  # Player, Dealer cards
     cards_lngth = len(cards_ttl)
     p_t, d_t = sum(p), sum(d)
     cd_avg = round((sum(cards_ttl)/cards_lngth), 2)
-
     # Who wins?
-    if d_t > 21:
-        msg = "Dealer bust. Player wins"
-    elif d_t > p_t:
+    # Handle effing Blackjacks
+    if BJ(p):
+        if BJ(d):
+            msg = "Push"
+        else:
+            msg = "Player wins 3:2"
+    # Player bust?
+    elif p_t > 21:
         msg = "Player loses"
-    if p_t > 21:
-        msg = "Player bust, loses"
+    # Dealer bust?
+    elif d_t > 21:
+        msg = "Dealer bust. Player wins"
+    # Push?
+    elif p_t == d_t:
+        msg = "Push!"
+    # Who wins?
     elif p_t > d_t:
         msg = "Player wins"
+    else:
+        msg = "Player loses"
 
-    if p_t == d_t:
-        # Handle effing Blackjacks
-        if p_t == 21:
-            if len(p) == 2 and len(d) == 2:
-                msg = "Push!"
-            elif len(p) == 2:
-                msg = "Player wins 3:2"
-            elif len(d) == 2:
-                msg = "Player loses"
-            else:
-                msg = "Push!"
-        else:
-            msg = "Push!"
+    reveal(msg)
 
     # Analyse hand
     if "loses" in msg:
@@ -402,8 +394,10 @@ def end_hand(p, d):  # Player, Dealer cards
     if c == -1:
         bet[0] = betting_strategy[0]
         bank[0] -= bet[0]
+    elif int(c) == 0:
+        bet[0] = betting_strategy[strat]
     else:
-        bank[0] += 2*int(c)*bet[0]
+        bank[0] += int(2*float(c)*bet[0])
         bet[0] = betting_strategy[strat]
         bank[0] -= bet[0]
 
@@ -413,6 +407,7 @@ def end_hand(p, d):  # Player, Dealer cards
             "avg {}".format(cd_avg),
             "bet {}".format(bet[0]),
             "bank {}".format(bank[0]))
+    print("\b"*(len(msg)+1), msg, flush=True)
     if bank[0]+bet[0] <= 0:
         msg = ("You're broke! Resetting - Games: {}, win/loss: {}/{}, "
                "longest {}/{}    ".format(
@@ -445,74 +440,22 @@ def end_hand(p, d):  # Player, Dealer cards
     return d, p
 
 
-def message(who, hand):
-    # repeat message routine
-    cd = hand[-1]
-    tot = sum(hand)
-    # Opening hand
-    if len(hand) == 2:
-        if who == 'Dealer':
-            # If Dealer has an ace...
-            if hand[0] == 1:
-                msg = "\n{} has an ace and one hidden card\n".format(who)
-            else:
-                msg = "\n{} has {} and one hidden card\n".format(who, hand[0])
-            return msg, hand
-            # Check for Players Blackjack
-        elif BJ(p_cards):
-                msg = "Player has an ace and a 10. Blackjack!"
-                return msg, hand
-
-            # No Blackjack but need to identify aces for soft total strategy
-            elif hand[0] == 1 and hand[1] == 1:
-                msg = "Player has two aces, total {}".format(tot+10)
-            elif hand[0] == 1:
-                hand[0] = 11
-                # Need ace to be final card to trigger soft total strategy
-                msg = "Player has an ace and {}, total {} or {}".format(
-                        hand[1], tot, tot+10)
-                hand[0], hand[1] = hand[1], hand[0]
-            elif hand[1] == 1:
-                hand[1] = 11
-                msg = "Player has {} and an ace, total {} or {}".format(
-                        hand[0], tot, tot+10)
-            else:
-                msg = "player has {} and {}, total {}".format(
-                        hand[0], hand[1], tot)
-            return msg, hand
-
-    # Has ace, Bust? will return with card revalued to 1
-    if cd == 11 and tot > 21:
-        msg = "Bust"
-        return msg, hand
-    # Has hard total ace.
-    if cd == 11:
-        # Not bust, but hard total...
-        if tot > 11:
-            msg = "{} draws an ace, total {}".format(who, tot)
-        # ...otherwise soft total
-        else:
-            msg = "{} draws an ace, total {} or {}".format(who, tot-10, tot)
-    elif cd == 1:
-        msg = "{} draws an ace, total {}".format(who, tot)
-    else:
-        msg = "{} draws {}, total {}".format(who, cd, tot)
-
-    if tot > 21:
-        msg = msg + ". Bust!"
-
-    return msg, hand
-
-
 def BJ(hand):
-    if 1 in hand and sum(hand) == 11:
-        return True
-    else:
-        False
-        
-        
+    if len(hand) == 2:
+        if 1 in hand and sum(hand) == 11:
+            return True
+        else:
+            False
+
+
+def reveal(m):
+    print(m)
+    return
+
+
 # Main program starts here
 while 1:
+    print("\n------------------------")
     ##############################
     # Set up game - Initial deal #
     ##############################
@@ -521,65 +464,59 @@ while 1:
         d_cards.append(shoe.pop())
         p_cards.append(shoe.pop())
 
+    # Reveal Dealers card...
+    msg, d_cards = message('Dealer', d_cards)
+    reveal(msg)
+
     # Check for Blackjacks first
     if BJ(p_cards):
-        msg = "Player has an ace and a 10. Blackjack!"
-        if BJ(d_cards) and d_cards[0] == 1:
-            msg = "\nDealers hidden card is 10. Blackjack!"
+        p_cards[p_cards.index(1)] = 11
+        reveal("Player has an ace and a 10. Blackjack!")
+        if d_cards[0] == 10 or d_cards[0] == 1:
+            if BJ(d_cards):
+                if d_cards[0] == 1:
+                    reveal("\nDealers hidden card is 10. Blackjack!")
+                else:
+                    reveal("\nDealers hidden card is an ace. Blackjack!")
+                p_cards, d_cards = end_hand(p_cards, d_cards)
         else:
-            "\nDealers hidden card is an ace. Blackjack!"
-
-    # Dealer total; Player total
-    d_tot = sum(d_cards)
-    p_tot = sum(p_cards)
-
-    # Reveal opening hands...
-    d_msg, d_cards = message('Dealer', d_cards)
-    p_msg, p_cards = message('Player', p_cards)
-    print(d_msg)
-    print(p_msg)
+            reveal("\nDealers hidden card is {}".format(d_cards[1]))
+            # Hand over to end_hand function to analyse and reset
+            p_cards, d_cards = end_hand(p_cards, d_cards)
+    else:
+        # Reveal the deal...
+        msg, p_cards = message('Player', p_cards)
+        reveal(msg)
 
     ###########################################
     #               Start playing             #
     ###########################################
 
-    p_cards = players_strategy('Player', p_cards)
-
-
-
-
-
-
-
-    # Player uses same strategy as Dealer
-    p_tot = sum(p_cards)
-    while p_tot < 17:
-        p_cards.append(shoe.pop())
-        if p_cards[-1] == 1:
-            p_cards[-1] = 11
-            p_tot = sum(p_cards)
-        msg = message('Player', p_cards)
+    while len(d_cards) > 1:
+        # while there are cards in the hand, keep playing
+        msg = players_strategy(p_cards, d_cards)
+        # If player busts just end the game
         if "Bust" in msg:
-            if 11 in p_cards:
-                p_cards[p_cards.index(11)] = 1
-                msg = message('Player', p_cards)
-                p_tot = sum(p_cards)
-            if p_tot > 17:
-                print(msg)
-                break
+            p_cards, d_cards = end_hand(p_cards, d_cards)
+            break
 
-    stand(p_cards, d_cards)
-    p_cards, d_cards = end_hand(p_cards, d_cards)
-    # break
-    # sleep(1)  # input("press any key")
+        # If player doesn't bust continue to check dealers hand
+        msg = dealers_strategy(d_cards)
+        if "Bust" in msg:
+            p_cards, d_cards = end_hand(p_cards, d_cards)
+            break
+
+        p_cards, d_cards = end_hand(p_cards, d_cards)
 
     if len(shoe) < 52:
         """print("------------------------")
         print(".----------------------.")
         print("|    Shuffling shoe    |")
         print("'----------------------'")
-        print("'------------------------------------------------------'")"""
+        print("------------------------")"""
         shoe = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]*decks*4
         # shuffle shoe
         random.seed()
         random.shuffle(shoe)
+
+    sleep(5)
